@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z-Index Demo</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Box 1 */
+.box1 {
+  position: relative;  /* Must be positioned */
+  width: 200px;
+  height: 200px;
+  background: red;
+  z-index: 1;          /* Behind box2 and box3 */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+/* Box 2 */
+.box2 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: blue;
+  z-index: 2;          /* On top of box1 */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-top: -150px;  /* Overlapping box1 */
+  margin-left: 50px;
+}
+
+/* Box 3 */
+.box3 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: green;
+  z-index: 3;          /* On top of both box1 and box2 */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-top: -150px;  /* Overlapping previous boxes */
+  margin-left: 100px;
+}
+</style>
+</head>
+<body>
+
+<h1>Z-Index Demo</h1>
+
+<div class="box1">Box 1 (z-index:1)</div>
+<div class="box2">Box 2 (z-index:2)</div>
+<div class="box3">Box 3 (z-index:3)</div>
+
+<p>
+Notice how the boxes overlap: green (box3) is on top, blue (box2) is in the middle, and red (box1) is at the bottom.
+</p>
+<script>
+   
+let x=[1,2,"ravi","hello","hi",5,6,"shastry",7,8,9,10]
+
+console.log(String(x.reverse()));
+console.log(x.indexOf("ravi"));
+console.log(x.indexOf("shastry"));
+
+let m = x.splice(9,1)[0].toUpperCase().split("").reverse().join("");
+let n = x.splice(4,1)[0].toUpperCase().split("").reverse().join("");
+
+console.log(m);
+console.log(n);
+
+ console.log(x.splice(4,0,m));  
+ console.log(x.splice(9,0,n)); 
+ console.log(x);
+
+ let str = "  Hello Ravi  ";
+
+console.log("Original:", str);
+
+// Length
+console.log("Length:", str.length);
+
+// Trim
+let trimmed = str.trim();
+console.log("Trimmed:", trimmed);
+console.log(str.length);
+
+// Upper & Lower case
+console.log("UpperCase:", trimmed.toUpperCase());
+console.log("LowerCase:", trimmed.toLowerCase());
+
+// Index & Includes
+console.log("Index of Ravi:", trimmed.indexOf("Ravi"));
+console.log("Includes Hello:", trimmed.includes("Hello"));
+
+// Slice & Substring
+console.log("Slice(0,5):", trimmed.slice(0,5));
+console.log("Substring(0,5):", trimmed.substring(0,5));
+
+// Replace
+console.log("Replace Ravi with Kumar:", trimmed.replace("Ravi","Kumar"));
+
+// Character access
+console.log("First character:", trimmed[0]);
+console.log("charAt(1):", trimmed.charAt(1));
+
+// Split
+let words = trimmed.split(" ");
+console.log("Split into words:", words);
+
+// Reverse string
+let reversed = trimmed.split("").reverse().join("");
+console.log("Reversed:", reversed);
+
+// Repeat
+console.log("Repeat 2 times:", trimmed.repeat(2));
+
+// Pad
+console.log("PadStart:", "lohi".padStart(10,"0"));
+console.log("PadEnd:", "kpv0208".padEnd(10,"0"));
+
+// Template literal
+let name = "Ravi";
+console.log(`Hello ${name}`);
+let fruit=["apple","orange","grapes","pineapple","mango","muskmelon","gauva","banana","cherry","straubery","pappaya"]
+for(let i=0;i<=fruit.length-1;i++){
+console.log(fruit[i]);
+}
+
+
+let lohi=["lohith","kp","02082"]
+let kp=[]
+
+
+
+for(let i=0;i<=lohi.length-1;i++){
+  if(lohi[i]=="lohi" || lohi[i]=="kp"){
+  
+ let x= kp.push(lohi[i].toLocaleUpperCase());
+  
+  
+  
+  console.log(kp);
+}
+else{
+  console.log(kp.push(lohi[i]))
+    console.log(kp[i]);
+}
+}
+
+
+
+    
+    
+
+    
+</script>
+
+</body>
+</html

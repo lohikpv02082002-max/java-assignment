@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            width: 500px;
+            height: 500px;
+        }
+        #lohi>img{
+             width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 8px;
+            left: 400px;
+            border: 10px solid white;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="c:\Users\VISHWANATH\Background Image.png">
+      <div id="lohi">  <img src="c:\Users\VISHWANATH\Background Image.png"></div>
+        
+    </div>
+    <script>
+        let a=["apple","pineapple","ravi","mango","orange","shasthry","avacado","muskmelon"]
+        let b=[];
+        
+
+      for(let i=0;i<=a.length-1;i++){
+        if(a[i]=="pineapple"||a[i]=="avacado"){
+         (a.splice(i,0,lohi)||a.splice(i,0,kpv))
+
+        }else{
+            b.push(a[i]);
+
+        }
+    }
+    console.log(b);
+
+
+    </script>
+    
+</body>
+</html>

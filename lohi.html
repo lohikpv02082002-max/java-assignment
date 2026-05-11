@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidebar Toggle Menu</title>
+<style>
+/* RESET */
+body { margin: 0; font-family: Arial; }
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  height: 80px;
+}
+.navbar>h3{
+  position: fixed;
+  left: 50%;
+  
+}
+
+.navbar button {
+  background: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position:fixed;
+  top: px;
+  left: -250px;   /* hidden by default */
+  width: 200px;
+  height: 100%;
+  background: #444;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.sidebar.active {
+  left: 0;        /* slide in */
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+/* CONTENT */
+.content {
+  margin-left: 0;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.content.shift {
+  margin-left: 250px;   /* shift when sidebar open */
+}
+
+/* SCROLLABLE BOXES */
+.box {
+  height: 400px;
+  background: #f2f2f2;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 300px;
+}
+#lohi{
+  position: sticky;
+  top: 0%;
+  height: 2px;
+  
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <h3>My Website</h3>
+  <button onclick="toggleSidebar()">☰ </button>
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <h3>Sidebar</h3>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content" id="content">
+  <div class="box" id="lohi">Scroll Content 1</div>
+  <div class="box">Scroll Content 2</div>
+  <div class="box">Scroll Content 3</div>
+</div>
+
+ <label for="options">Choose an option:</label>
+  <select id="options" onchange="showSelection()">
+    <option value="">--Select--</option>
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+  </select>
+
+<script>
+function toggleSidebar() {
+  document.getElementById("sidebar").classList.toggle("active");
+  document.getElementById("content").classList.toggle("shift");
+}
+</script>
+
+</body>
+</html>

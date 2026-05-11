@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lohi.js">
+    <style>
+        *{
+            margin:0%;
+            padding:0%;
+
+        }
+        body{
+            background-color: rgb(15, 15, 15);
+        }
+       .logo
+       {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 10px;
+        align-items: start;
+        gap:10px;
+        
+       }
+       
+       .navbar>a{
+        
+       
+        color:rgb(6, 162, 12);
+        
+       
+       }
+       .container{
+        background:linear-gradient(135deg,black,green);
+        height: 8vh;
+        margin:10px;
+        display:flex;
+        padding:60px;
+        justify-content: space-around;
+        margin-bottom: 0%;
+        
+
+       }
+       .navbar{
+        
+        display: flex;
+        justify-content: space-around;
+        color:rgb(21, 165, 4);
+        gap:200px;
+        padding: 15px;
+        
+       }
+       .container1{
+        height: 70vh;
+        background:linear-gradient(135deg,green,black,yellow);
+        margin:15px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-top: 0%;
+        
+        
+       
+       
+       
+       }
+       #lohi{
+       
+       }
+       .lohi2{
+        margin-left: 30px;
+        width: 40%;
+       }
+       img{
+        height: 280px;
+        width:400px;
+        
+       
+       }
+       p{
+        text-align: justify;
+       }
+       #lohi{
+         
+           
+           display:flex;
+           justify-content: center;
+           align-items: center;
+
+       }
+       #kumar{
+    height: 40vh;
+    background:linear-gradient(60deg,red, purple,yellow,green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    border: 5px solid black;
+       }
+      #lohi>a>button{
+        color: green;
+        border-color: brown;
+        border-radius: 10px;
+        background-color: beige;
+      }
+       
+           
+          
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><h1 style="color: rgb(51, 170, 7);">LOHITH</h1></div>
+            <div class="navbar">
+                <a href="">about us</a>
+                <a href="">contact us</a>
+                <a href="">faq</a>
+                <a href="">help</a>
+                <a href="">signup</a>
+            
+            
+        </div>
+    </div><div>
+    <div class="container1">
+        <div id="kumar">
+    
+        <div id="img"> <img src="data:image/jpeg;base64,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"></div>
+        <div class="lohi2">
+        <h1>hello</h1><br>
+        <h1>im lohith kumar</h1><br>
+        <h2> java fullstack developer</h2><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus consequuntur quis facilis dignissimos molestias? Modi consectetur fugiat obcaecati tenetur ratione temporibus. Sunt quae iste itaque aliquid voluptates. Laudantium, nesciunt quisquam.</p><br><br>
+        <div id="lohi"> <button><a href="initial.html">click me</a></button></div></div></div>
+        </div>
+        
+</body>
+</html>

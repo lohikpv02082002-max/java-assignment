@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Veg Food Menu</title>
+
+<style>
+body {
+    <!-- background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80"); -->
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.0); /* transparent */
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+th, td {
+    border: 2px solid #111; /* dark border */
+    padding: 8px;
+    text-align: center;
+    vertical-align: top;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+td {
+    background: rgba(0, 0, 0, 0.35); /* transparent dark */
+}
+
+img {
+    width: 90px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+ul {
+    text-align: left;
+    padding-left: 18px;
+}
+
+a {
+    color: #00ffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#total {
+    width: 95%;
+    margin: 20px auto;
+    color: white;
+    font-size: 18px;
+    text-align: right;
+}
+</style>
+</head>
+
+<body>
+
+<div id="total">Selected Items: 0</div>
+
+<table>
+<thead>
+<tr>
+    <th>Select</th>
+    <th>Sl No</th>
+    <th>Item</th>
+    <th>Image</th>
+    <th>Description</th>
+    <th>List of Food</th>
+    <th>Extras</th>
+    <th>Price</th>
+    <th>Link</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="250"></td>
+<td>1</td>
+<td>Veg Pizza</td>
+<td><img src="https://media.istockphoto.com/id/2150383746/photo/food-photos-various-entrees-appetizers-deserts-etc.webp?a=1&b=1&s=612x612&w=0&k=20&c=yTLeVTDDOGaR0Gtz3ERIjb4U_q6VIaTFhhl1DK6OBT0="></td>
+<td>Cheesy veg pizza</td>
+<td><ul><li>Cheese</li><li>Capsicum</li><li>Olives</li></ul></td>
+<td>Extra Cheese</td>
+<td>₹250</td>
+<td><a href="https://unsplash.com/s/photos/veg-pizza" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="150"></td>
+<td>2</td>
+<td>Veg Burger</td>
+<td><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmVnZ2llJTIwYnVyZ2VyfGVufDB8fDB8fHww"></td>
+<td>Spicy veg burger</td>
+<td><ul><li>Bun</li><li>Patty</li><li>Sauce</li></ul></td>
+<td>Extra Sauce</td>
+<td>₹150</td>
+<td><a href="https://unsplash.com/s/photos/veg-burger" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="120"></td>
+<td>3</td>
+<td>Masala Dosa</td>
+<td><img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFzYWxhJTIwZG9zYXxlbnwwfHwwfHx8MA%3D%3D"></td>
+<td>Crispy dosa</td>
+<td><ul><li>Rice</li><li>Potato</li><li>Chutney</li></ul></td>
+<td>Extra Chutney</td>
+<td>₹120</td>
+<td><a href="https://unsplash.com/s/photos/masala-dosa" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="80"></td>
+<td>4</td>
+<td>Idli</td>
+<td><img src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aWRsaXxlbnwwfHwwfHx8MA%3D%3Dhttps://images.unsplash.com/photo-1630383249896-424e482df921?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aWRsaXxlbnwwfHwwfHx8MA%3D%3D"></td>
+<td>Soft idli</td>
+<td><ul><li>Rice</li><li>Urad Dal</li><li>Sambar</li></ul></td>
+<td>Extra Sambar</td>
+<td>₹80</td>
+<td><a href="https://unsplash.com/s/photos/idli" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="220"></td>
+<td>5</td>
+<td>Veg Biryani</td>
+<td><img src="https://media.istockphoto.com/id/1363306527/photo/veg-biryani.webp?a=1&b=1&s=612x612&w=0&k=20&c=y7WrUSX8ULsXWuaU8vuqgiGD047He_X-n5EM6LpxTT0="></td>
+<td>Flavored rice</td>
+<td><ul><li>Rice</li><li>Vegetables</li><li>Spices</li></ul></td>
+<td>Extra Raita</td>
+<td>₹220</td>
+<td><a href="https://unsplash.com/s/photos/veg-biryani" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="180"></td>
+<td>6</td>
+<td>Pav Bhaji</td>
+<td><img src="https://media.istockphoto.com/id/1438867572/photo/pav-bhaji-is-a-fast-food-dish-from-india-consisting-of-a-thick-vegetable-curry-served-with.webp?a=1&b=1&s=612x612&w=0&k=20&c=BGFXFHagLBF_1xTBh3j9gwi3dkKRO74dXeoXOKJPCmw="></td>
+<td>Spicy mash</td>
+<td><ul><li>Vegetables</li><li>Butter</li><li>Pav</li></ul></td>
+<td>Extra Butter</td>
+<td>₹180</td>
+<td><a href="https://unsplash.com/s/photos/pav-bhaji" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="260"></td>
+<td>7</td>
+<td>Paneer Butter Masala</td>
+<td><img src="https://media.istockphoto.com/id/1847114786/photo/nice-food-dish-panner-cubes-and-peas-panner-peas-mix-spicy.webp?a=1&b=1&s=612x612&w=0&k=20&c=gWANKUvUhLyHT91N5DX9kdaL2zIB6jd9L6miBKMVjSk="></td>
+<td>Creamy curry</td>
+<td><ul><li>Paneer</li><li>Butter</li><li>Tomato</li></ul></td>
+<td>Extra Paneer</td>
+<td>₹260</td>
+<td><a href="https://unsplash.com/s/photos/paneer-butter-masala" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="200"></td>
+<td>8</td>
+<td>Veg Fried Rice</td>
+<td><img src="https://media.istockphoto.com/id/1292618430/photo/healthy-and-tasty-veg-fried-rice-made-of-mixed-veggies-served-in-bowl-over-a-rustic-wooden.webp?a=1&b=1&s=612x612&w=0&k=20&c=RkaZ7rrV6ODFKjgYpRGw4ZMzPiSzACVh0xWF9ED1_3E="></td>
+<td>Chinese style rice</td>
+<td><ul><li>Rice</li><li>Veggies</li><li>Soy Sauce</li></ul></td>
+<td>Extra Veg</td>
+<td>₹200</td>
+<td><a href="https://unsplash.com/s/photos/veg-fried-rice" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="190"></td>
+<td>9</td>
+<td>Veg Noodles</td>
+<td><img src="https://media.istockphoto.com/id/1252605665/photo/chilli-garlic-hakka-noodles-in-black-bowl-isolated-on-white-background-indo-chinese.webp?a=1&b=1&s=612x612&w=0&k=20&c=Wn9-tHGINzUeuDectriTti71k5_AwIYn4mBxvMfqkMU="></td>
+<td>Stir fried noodles</td>
+<td><ul><li>Noodles</li><li>Veggies</li><li>Sauce</li></ul></td>
+<td>Extra Sauce</td>
+<td>₹190</td>
+<td><a href="https://unsplash.com/s/photos/veg-noodles" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="210"></td>
+<td>10</td>
+<td>Chole Bhature</td>
+<td><img src="https://media.istockphoto.com/id/979914742/photo/chole-bhature-or-chick-pea-curry-and-fried-puri-served-in-terracotta-crockery-over-white.webp?a=1&b=1&s=612x612&w=0&k=20&c=8pmBVIcNb-GIFnsBT0sYqfy-YtzNq7pOqc6lQZgFOPo="></td>
+<td>Punjabi dish</td>
+<td><ul><li>Chickpeas</li><li>Flour</li><li>Spices</li></ul></td>
+<td>Extra Bhature</td>
+<td>₹210</td>
+<td><a href="https://unsplash.com/s/photos/chole-bhature" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="200"></td>
+<td>11</td>
+<td>Rajma Rice</td>
+<td><img src="https://images.unsplash.com/photo-1668236534990-73c4ed23043c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFqbWElMjByaWNlfGVufDB8fDB8fHww"></td>
+<td>Rajma curry</td>
+<td><ul><li>Rajma</li><li>Rice</li><li>Spices</li></ul></td>
+<td>Extra Raita</td>
+<td>₹200</td>
+<td><a href="https://unsplash.com/s/photos/rajma-rice" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="90"></td>
+<td>12</td>
+<td>Upma</td>
+<td><img src="https://media.istockphoto.com/id/1488737992/photo/upma-recipe-suji-ka-upma-rava-upma-with-red-and-coconut-chutney.webp?a=1&b=1&s=612x612&w=0&k=20&c=1zjO85hiNAi55VhDbcISJjm2291mEw_pszwU1QuJKzs="></td>
+<td>South Indian breakfast</td>
+<td><ul><li>Rava</li><li>Vegetables</li><li>Spices</li></ul></td>
+<td>Extra Chutney</td>
+<td>₹90</td>
+<td><a href="https://unsplash.com/s/photos/upma" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="80"></td>
+<td>13</td>
+<td>Poha</td>
+<td><img src="https://plus.unsplash.com/premium_photo-1713370407756-acedc62f5fbb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9oYXxlbnwwfHwwfHx8MA%3D%3D"></td>
+<td>Light breakfast</td>
+<td><ul><li>Flattened Rice</li><li>Peanuts</li><li>Onion</li></ul></td>
+<td>Extra Lemon</td>
+<td>₹80</td>
+<td><a href="https://unsplash.com/s/photos/poha" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="100"></td>
+<td>14</td>//*/**
+<td>Veg Sandwich</td>
+<td><img src="https://plus.unsplash.com/premium_photo-1664472757995-3260cd26e477?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmVnJTIwc2FuZHdpY2h8ZW58MHx8MHx8fDA%3D"></td>
+<td>Healthy snack</td>
+<td><ul><li>Bread</li><li>Veggies</li><li>Butter</li></ul></td>
+<td>Extra Cheese</td>
+<td>₹100</td>
+<td><a href="https://unsplash.com/s/photos/veg-sandwich" target="_blank">View</a></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" class="chk" data-price="110"></td>
+<td>15</td>
+<td>Curd Rice</td>
+<td><img src="https://images.unsplash.com/photo-1633383718081-22ac93e3db65?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3VyZCUyMHJpY2V8ZW58MHx8MHx8fDA%3D"></td>
+<td>Cooling rice</td>
+<td><ul><li>Rice</li><li>Curd</li><li>Spices</li></ul></td>
+<td>Extra Pickle</td>
+<td>₹110</td>
+<td><a href="https://unsplash.com/s/photos/curd-rice" target="_blank">View</a></td>
+</tr>
+
+</tbody>
+</table>
+
+<script>
+const checkboxes = document.querySelectorAll(".chk");
+const total = document.getElementById("total");
+
+checkboxes.forEach(chk => {
+    chk.addEventListener("change", () => {
+        let selected = 0;
+        checkboxes.forEach(c => {
+            if(c.checked) selected++;
+        });
+        total.innerText = "Selected Items: " + selected;
+    });
+});
+</script>
+
+</body>
+</html>

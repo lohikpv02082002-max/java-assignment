@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Power Calculator</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #a30994, #ae3b0a);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #4facfe;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #007bff;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>⚡ Power Calculator</h2>
+
+  <input type="number" id="voltage" placeholder="Enter Voltage (V)">
+  <input type="number" id="current" placeholder="Enter Current (A)">
+
+  <button onclick="calculatePower()">Calculate</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+  function calculatePower() {
+    let voltage = parseFloat(document.getElementById("voltage").value);
+    let current = parseFloat(document.getElementById("current").value);
+
+    if (isNaN(voltage) || isNaN(current)) {
+      document.getElementById("result").innerText = "Please enter valid numbers!";
+      return;
+    }
+
+    let power = voltage * current;
+
+    document.getElementById("result").innerText =
+      "Power = " + power.toFixed(2) + " Watts";
+  }
+</script>
+
+</body>
+</html>
+

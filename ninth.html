@@ -1,0 +1,170 @@
+ele`ctr`ic unit consumes(  0-100=4rupes,100-200=6rupes ,201-400=8rupes,>400=10rupess,700)
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            background: linear-gradient(135deg, green, black);
+            color: white;
+            position: sticky;
+            top: 0;
+            margin: 0;
+            padding: 15px 0;
+        }
+
+        .man {
+            width: 200px;
+            background-color: green;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-top: 20px;
+            color: white;
+        }
+
+        .kpv {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .lohi {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-auto-rows: 100px;                  /* rows are 100px height */
+            gap: 20px;                              
+            justify-content: center;                 
+            align-content: start;
+            padding: 20px;
+            background: linear-gradient(65deg, green, black);
+            border: blue solid 5px;
+            border-radius: 10px;
+        }
+
+        .lohi > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <div class="kpv">
+        <div class="man">
+            <h3>Home</h3>
+            <h3>About Us</h3>
+            <h3>Help</h3>
+            <h3>Admin</h3>
+        </div>
+
+        <div class="lohi">
+            <div id="lohi1">1</div>
+            <div id="lohi2">2</div>
+            <div id="lohi3">3</div>
+            <div id="lohi4">4</div>
+            <div id="lohi5">5</div>
+            <div id="lohi6">6</div>
+        </div>
+    </div>
+</body>
+</html>
+    <script>
+        let correctPin = 1234;
+        let exit=true;
+        while(exit){
+        
+        let pin = Number(prompt("wecome to canara bank\n","\nEnter ATM PIN\n:"));
+        let balance =5000;
+        
+        if (pin === correctPin) {                                   
+            
+            ("wecome to canara bank");
+    let choice = prompt(
+        "ATM MENU\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit\nEnter your choice:"
+    );
+
+    switch (choice) {
+
+        case "1":
+            alert("Your Balance: " + balance);
+            break;
+
+        case "2":
+            let deposit = Number(prompt("Enter deposit amount:"));
+
+            if (deposit > 0) {
+                balance += deposit;
+                alert("Deposit successful. New Balance: " + balance);
+            } else {
+                alert("Invalid deposit amount.");
+            }
+            break;
+
+        case "3":
+            let withdraw = Number(prompt("Enter withdrawal amount:"));
+
+            if (withdraw > 0 && withdraw <= balance) {
+                balance -= withdraw;
+                alert("Please collect your cash.\nRemaining Balance: " + balance);
+            } 
+            else if (withdraw > balance) {
+                alert("Insufficient balance.");
+            } 
+            else {
+                alert("Invalid withdrawal amount.");
+            }
+            break;
+
+        case "4":
+        exit=false;
+            alert("Thank you for using the Canara BANK ATM.");
+            break;
+
+        default:
+            alert("Invalid choice.");
+    }
+
+}+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+        
+
+    
+    
+</body>
+    
+</html>

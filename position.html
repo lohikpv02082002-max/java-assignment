@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Position Examples</title>
+    <style>
+
+        body{
+            height:2000px; /* for scroll */
+            font-family:Arial;
+        }
+
+        h2{
+            margin-top:60px;
+        }
+
+        .container{
+            border:2px solid black;
+            height:200px;
+            margin:20px;
+            padding:20px;
+            position:relative;
+        }
+
+        .box{
+            width:100px;
+            height:100px;
+            background:orange;
+            text-align:center;
+            line-height:100px;
+            color:white;
+            font-weight:bold;
+        }
+
+        /* 1. STATIC (default) */
+        .static{
+            position:static;
+            background:gray;
+        }
+
+        /* 2. RELATIVE */
+        .relative{
+            position:relative;
+            top:20px;
+            left:30px;
+            background:green;
+        }
+
+        /* 3. ABSOLUTE */
+        .absolute{
+            position:absolute;
+            top:0;
+            right:0;
+            background:red;
+        }
+
+        /* 4. FIXED */
+        .fixed{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            background:blue;
+        }
+
+        /* 5. STICKY */
+        .sticky{
+            position:sticky;
+            top:0;
+            background:purple;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h1>CSS Position Examples</h1>
+
+<!-- STATIC -->
+<h2>1. Static (Default)</h2>
+<div class="container">
+    <div class="box static">Static</div>
+</div>
+
+<!-- RELATIVE -->
+<h2>2. Relative</h2>
+<div class="container">
+    <div class="box relative">Relative</div>
+</div>
+
+<!-- ABSOLUTE -->
+<h2>3. Absolute</h2>
+<div class="container">
+    <div class="box absolute">Absolute</div>
+</div>
+
+<!-- STICKY -->
+<h2>4. Sticky (Scroll Down)</h2>
+<div class="container">
+    <div class="box sticky">Sticky</div>
+</div>
+
+<!-- FIXED -->
+<div class="box fixed">Fixed</div>
+
+<p style="margin-top:800px;">
+Scroll down to see Sticky and Fixed behavior.
+</p>
+
+</body>
+</html>

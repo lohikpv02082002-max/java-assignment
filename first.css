@@ -1,0 +1,24 @@
+.container{
+    .fruits{
+        color: beige;
+        background-color: brown;
+        width: 50%;
+        align-items: center;
+    }
+    .vegitable{
+        color: beige;
+        background-color: blue;
+        width: 50%;
+        align-items: center;
+    }
+    #apple{
+        font-size: small;
+    }
+    #banana{}
+    #pineapple{}
+    #grapes{}
+    #orange{}
+    #onion{}
+
+    }ki80
+}   

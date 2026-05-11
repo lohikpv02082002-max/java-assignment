@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DCL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* ================= TOP NAV ================= */
+
+.twonav{
+    background-color:lightgoldenrodyellow;
+    padding:15px 0px;
+}
+
+.firstnav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.firstnav h5{
+    font-size:12px;
+}
+
+.firstnav li{
+    list-style:none;
+    border:1px solid #DF600B;
+    border-radius:20px;
+    padding:5px 10px;
+    font-size:14px;
+}
+
+/* ================= SECOND NAV ================= */
+
+.secondnav{
+    background:white;
+    width:80%;
+    margin:20px auto;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    padding:10px 20px;
+    justify-content:space-between;
+}
+
+.secondnav img{
+    height:60px;
+}
+
+.secondnav ul{
+    display:flex;
+    gap:20px;
+}
+
+.secondnav li{
+    list-style:none;
+    font-size:16px;
+}
+
+/* ================= HERO SECTION ================= */
+
+.pre{
+    text-align:center;
+    margin-top:40px;
+}
+
+.pre h1{
+    font-size:48px;
+}
+
+.pre p{
+    margin-top:20px;
+    font-size:20px;
+    color:#555;
+}
+
+/* ================= B FULL CONTAINER ================= */
+
+.bfullcontainer{
+    margin-top:80px;
+    text-align:center;
+}
+
+.bfullcontainer h1{
+    font-size:40px;
+}
+
+/* ================= C FULL CONTAINER ================= */
+
+.cfullcontainer .block{
+    display:flex;
+    padding-left:90px;
+    padding-top:50px;
+}
+
+.cfullcontainer .block .box1{
+    background-color:rgb(240,191,76);
+    width:1000px;
+    height:300px;
+    border:1px solid black;
+    padding:40px;
+    font-size:23px;
+    border-radius:30px;
+    font-family:sans-serif;
+}
+
+.cfullcontainer .block .box2{
+    background-color:rgb(245,148,148);
+    font-size:23px;
+    width:500px;
+    height:300px;
+    border:1px solid black;
+    margin-left:50px;
+    border-radius:30px;
+    padding:40px;
+    margin-right:90px;
+    font-family:sans-serif;
+}
+
+.cfullcontainer .block .img,
+.cfullcontainer .block .img1{
+    width:100px;
+    height:100px;
+}
+
+/* SECOND ROW */
+
+.cfullcontainer .block1{
+    display:flex;
+    margin-top:20px;
+}
+
+.cfullcontainer .block1 .box3{
+    background-color:rgb(91,209,215);
+    font-size:23px;
+    width:350px;
+    height:300px;
+    border:1px solid black;
+    margin-left:50px;
+    border-radius:30px;
+    padding:40px;
+    margin-right:90px;
+    font-family:sans-serif;
+}
+
+.cfullcontainer .block1 .box4{
+    background-color:rgb(144,238,144);
+    font-size:23px;
+    width:350px;
+    height:300px;
+    border:1px solid black;
+    border-radius:30px;
+    padding:40px;
+    margin-right:90px;
+    font-family:sans-serif;
+}
+
+.cfullcontainer .block1 .img2,
+.cfullcontainer .block1 .img3{
+    width:100px;
+    height:100px;
+}
+
+/* ================= FOOTER NAV ================= */
+
+.thirdnav{
+    margin:100px auto;
+    width:800px;
+    display:flex;
+    justify-content:space-around;
+    border:1px solid lightpink;
+    border-radius:30px;
+    padding:15px;
+}
+
+.thirdnav li{
+    list-style:none;
+    font-size:18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= TOP NAV ================= -->
+
+<div class="twonav">
+    <div class="firstnav">
+        <h5>“What we PROMISE is what we DELIVER”</h5>
+        <li>BTM Layout +91 8904080070</li>
+        <li>Yelahanka +91 9071010044</li>
+        <li>Rajajinagar +91 8861908889</li>
+    </div>
+</div>
+
+<!-- ================= SECOND NAV ================= -->
+
+<div class="secondnav">
+    <img src="https://yt3.googleusercontent.com/dPwNLQgAjDLvVw6ygE3i9KP2jo8XgFMvmLYPQ0GY-3-VC91IR5Gkl3808KTyXBy_tCUZTKdHzA=s900-c-k-c0x00ffffff-no-rj">
+    <ul>
+        <li>Home</li>
+        <li>Who We Are</li>
+        <li>Course</li>
+        <li>Journey</li>
+        <li>Hire From Us</li>
+        <li>Contact</li>
+    </ul>
+</div>
+
+<!-- ================= HERO ================= -->
+
+<div class="pre">
+    <h1>Premium, Structured Courses for Tech Career</h1>
+    <p>Join 1,25,000+ successful students who have transformed their lives with us.</p>
+</div>
+
+<!-- ================= WHAT YOU GET ================= -->
+
+<div class="bfullcontainer">
+    <h1>What you get ?</h1>
+
+    <div class="cfullcontainer">
+
+        <div class="block">
+            <div class="box1">
+                <img src="https://dheecodinglab.com/_next/static/media/technology.100ddad6.gif" class="img">
+                <h2>BEST technology training in India with simplified methodology. (Even a 12th std kid can become a software developer)</h2>
+            </div>
+
+            <div class="box2">
+                <img src="https://dheecodinglab.com/_next/static/media/guarantee.7eee76b7.gif" class="img1">
+                <h2>100% INTERVIEW GUARANTEE (Min 30+ interviews, We write & promise you)</h2>
+            </div>
+        </div>
+
+        <div class="block1">
+            <div class="box3">
+                <img src="https://dheecodinglab.com/_next/static/media/training.5a5d617d.gif" class="img2">
+                <h2>BEST quality training with satisfaction guarantee.</h2>
+            </div>
+
+            <div class="box4">
+                <img src="https://dheecodinglab.com/_next/static/media/internship.fcbb66cf.gif" class="img3">
+                <h2>6 months of bootcamp which makes the student 'project ready developer'</h2>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<div class="thirdnav">
+    <li>What you get?</li>
+    <li>Who we are</li>
+    <li>Partner</li>
+    <li>Courses</li>
+    <li>Team</li>
+    <li>Contact us</li>
+</div>
+
+</body>
+</html>
+

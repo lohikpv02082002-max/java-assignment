@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Interactive Dashboard</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  height:100vh;
+  overflow:hidden;
+  background:#f4f6f8;
+}
+
+/* HEADER */
+.header{
+  height:60px;
+  background:#1e293b;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+}
+
+.header input{
+  width:250px;
+  padding:6px 10px;
+  border-radius:6px;
+  border:none;
+  outline:none;
+}
+
+.header button{
+  background:#38bdf8;
+  border:none;
+  padding:7px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* LAYOUT */
+.container{
+  display:flex;
+  height:calc(100vh - 60px);
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:220px;
+  background:#9d9f8f;
+  color:rgb(85, 8, 8);
+  padding:15px;
+  transition:0.6s;
+}
+
+.sidebar.hidden{
+  width:60px;
+}
+
+.sidebar div{
+  padding:10px;
+  margin-bottom:8px;
+  cursor:pointer;
+  border-radius:6px;
+}
+
+.sidebar div:hover,
+.sidebar .active{
+  background:#05a907;
+  color:black;
+}
+
+/* CONTENT */
+.content{
+  flex:1;
+  padding:20px;
+  overflow-y:auto;
+}
+
+/* CARDS */
+.cards{
+  display:GRID;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:15px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* DARK MODE */
+.dark body{
+  background:#020617;
+}
+
+.dark .header{
+  background:black;
+}
+
+.dark .content{
+  background:#020617;
+}
+
+.dark .card{
+  background:#0f172a;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <button onclick="toggleSidebar()">☰</button>
+  <input type="text" placeholder="Search..." onkeyup="searchCards(this.value)">
+  <button onclick="toggleDark()">🌙</button>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+    <div class="active">Dashboard</div>
+    <div>Orders</div>
+    <div>Products</div>
+    <div>Customers</div>
+    <div>Settings</div>
+  </div>
+  <!-- CONTENT -->
+  <div class="content">
+    <h2>Dashboard Items</h2><br>
+
+    <div class="cards" id="cards">
+      <div class="card">Product 1</div>
+      <div class="card">Product 2</div>
+      <div class="card">Product 3</div>
+      <div class="card">Product 4</div>
+      <div class="card">Product 5</div>
+      <div class="card">Product 6</div>
+      <div class="card">Product 7</div>
+      <div class="card">Product 8</div>
+      <div class="card">Product 9</div>
+      <div class="card">Product 10</div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function toggleSidebar(){
+  document.getElementById("sidebar").classList.toggle("hidden");
+}
+
+function toggleDark(){
+  document.documentElement.classList.toggle("dark");
+}
+
+function searchCards(value){
+  let cards = document.querySelectorAll(".card");
+  value = value.toLowerCase();
+  cards.forEach(card=>{
+    card.style.display = card.innerText.toLowerCase().includes(value)
+      ? "block" : "none";
+  });
+}
+i=1
+while(i<3)
+{
+  console.log(i);
+}
+i++;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("https://media.istockphoto.com/id/1425182760/photo/user-contact-book-sing-minimalistic-look-on-white-background-3d-render.webp");
+      background-size: cover;
+    }
+
+    .login-container {
+      background: rgba(15, 199, 34, 0.9);
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      width: 320px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #e60b4d;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      color: #3a15ce;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #333;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0,123,255,0.6);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 26px;
+      border: 2px solid aqua;
+      background: white;
+      color: rgb(24, 7, 140);
+      cursor: pointer;
+
+      /* animation */
+      transition: transform 0.8s ease;
+    }
+
+    /* 360 DEGREE MOVE */
+    .btn:hover {
+      background: #e420c4;
+      transform: rotate(360deg);
+    }
+
+    .bottom-text {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .bottom-text a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .bottom-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <h2><u>Welcome Back</u></h2>
+
+    <div class="input-group">
+      <label>Username</label>
+      <input type="text" placeholder="Enter Username">
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" placeholder="Enter Password">
+    </div>
+
+    <button class="btn">Login</button>
+
+    <div class="bottom-text">
+      <p>Forgot Password? <a href="#">Click Here</a></p>
+      <p>Don't have an account? <a href="#">Register</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
